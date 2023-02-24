@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 int search(int numbers[], int low, int high, int value) {
-    if (low > high) { // Base case: value not found
+    if (low > high) { 
         return -1;
     }
     
-    int mid = low + (high - low) / 2; // Calculate mid index
+    int mid = low + (high - low) / 2; 
     
-    if (numbers[mid] == value) { // Value found at mid index
+    if (numbers[mid] == value) { 
         return mid;
     }
-    else if (numbers[mid] > value) { // Search in the left half of the array
+    else if (numbers[mid] > value) { 
         return search(numbers, low, mid - 1, value);
     }
     else { // Search in the right half of the array
